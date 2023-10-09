@@ -1,46 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>Pariwisata</title>
     <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: azure;
-            text-align: justify;
-        }
-        h1 {
-            color: black;
-        }
-        p {
-            font-size: 17px;
-            line-height: normal;
-        }
-       
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: azure;
+        text-align: justify;
+      }
+      h1 {
+        color: black;
+      }
+      p {
+        font-size: 17px;
+        line-height: normal;
+      }
+      table {
+        border: 1px solid black;
+        width: 80%;
+        margin: 10% auto;
+        border-collapse: collapse;
+      }
+      table caption {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: aliceblue;
+      }
+      form {
+        width: 70%;
+        margin: auto;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="email"],
+      textarea,
+      select {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+      input[type="submit"] {
+        background-color: blue;
+        color: aliceblue;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Fakta Menarik Pariwisata Indonesia</h1>
+      <h1>Fakta Menarik Pariwisata Indonesia</h1>
     </header>
     <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">contack</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">contack</a></li>
     </ul>
-    <img src="pl.jpg" alt="pulau">
-    <p>Indonesia memang terkenal dengan keindahan alamnya yang luar biasa. Tidak heran jika pariwisata menjadi salah satu sektor unggulan di Indonesia. Pada tahun 2019,
-        sektor pariwisata Indonesia berhasil meraup pendapatan sebesar 297 triliun rupiah. Berikut ini adalah sederet fakta menarik mengenai industri pariwisata di Indonesia.</p>
+    <img src="pl.jpg" alt="pulau" />
+    <p>
+      Indonesia memang terkenal dengan keindahan alamnya yang luar biasa. Tidak
+      heran jika pariwisata menjadi salah satu sektor unggulan di Indonesia.
+      Pada tahun 2019, sektor pariwisata Indonesia berhasil meraup pendapatan
+      sebesar 297 triliun rupiah. Berikut ini adalah sederet fakta menarik
+      mengenai industri pariwisata di Indonesia.
+    </p>
     <h3>Indonesia memiliki lebih dari 17.000 pulau</h3>
-    <p>Indonesia memiliki kekayaan alam yang sangat melimpah, salah satunya adalah memiliki lebih dari 17.000 pulau yang tersebar di seluruh nusantara. Hal ini menjadi 
-        magnet bagi wisatawan untuk menjelajahi keindahan alam Indonesia.</p>
+    <p>
+      Indonesia memiliki kekayaan alam yang sangat melimpah, salah satunya
+      adalah memiliki lebih dari 17.000 pulau yang tersebar di seluruh
+      nusantara. Hal ini menjadi magnet bagi wisatawan untuk menjelajahi
+      keindahan alam Indonesia.
+    </p>
     <h3>Wisatawan asing yang berkunjung ke Indonesia terus meningkat</h3>
-    <p>Tidak hanya masyarakat Indonesia saja yang berlibur di dalam negeri, tetapi wisatawan asing yang berkunjung ke Indonesia juga semakin meningkat dari tahun ke tahun.
-         Pada tahun 2019, sekitar 16 juta wisatawan asing datang ke Indonesia, dan angka ini terus meningkat setiap tahunnya</p>
-         <br>
-         <br>
-         <p>klik <a href="http://www.google.com">di sini </a> untuk lebih lengkapnya</p>
-         
-</body>
+    <p>
+      Tidak hanya masyarakat Indonesia saja yang berlibur di dalam negeri,
+      tetapi wisatawan asing yang berkunjung ke Indonesia juga semakin meningkat
+      dari tahun ke tahun. Pada tahun 2019, sekitar 16 juta wisatawan asing
+      datang ke Indonesia, dan angka ini terus meningkat setiap tahunnya
+    </p>
+    <table border="1" cellpadding="10" cellspasing="0">
+      <caption>
+        Fakta-fakta Pariwisata Indonesia
+      </caption>
+      <tr>
+        <th>NO.</th>
+        <th>fakta</th>
+        <th>Deskripsi</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Jumlah pulau</td>
+        <td>lebih dari 17.000 pulau di Indonesia</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Wisatawan Asing</td>
+        <td>
+          Pada tahun 2019 sekitar 16 juta wisatawan asingdatang ke Indonesia
+        </td>
+      </tr>
+    </table>
+    <form action="proses_form.php" method="post">
+      <h3>Kirim Pertanyaan atau Komentar</h3>
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama" required />
+      <br /><br />
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" required />
+      <br /><br />
+      <label for="pesan">Pesan:</label>
+      <textarea id="pesan" name="pesan" rows="4"></textarea>
+      <br /><br />
+      <label for="kategori">Kategori</label>
+      <select name="kategori" id="kategori">
+        <option value="umum">Umum</option>
+        <option value="saran">Saran</option>
+        <option value="keluhan">Keluhan</option>
+      </select>
+      <br /><br />
+      <input type="submit" value="Kirim" />
+    </form>
+    <p>
+      klik <a href="http://www.google.com">di sini </a> untuk lebih lengkapnya
+    </p>
+  </body>
 </html>
