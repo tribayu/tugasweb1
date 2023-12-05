@@ -27,9 +27,9 @@
     ?>
 
     <form action="" method="post">
-        Name: <input type="text" name="name" value="<?php echo htmlspecialchars($name); ?>"><br>
-        E-mail: <input type="text" name="email" value="<?php echo htmlspecialchars($email); ?>"><br>
-        Alamat: <input type="text" name="alamat" value="<?php echo htmlspecialchars($alamat); ?>"><br>
+        Name: <input type="text" name="name"><br>
+        E-mail: <input type="text" name="email"><br>
+        alamat: <input type="text" name="alamat"><br>
         <input type="submit">
     </form>
     <?php
